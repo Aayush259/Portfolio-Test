@@ -1,0 +1,166 @@
+
+.home{
+    flex-direction:column;
+    align-items:flex-start;
+    min-height:100vh;
+}
+
+.homeCard{
+    max-width:85vw;
+    width:700px;
+    margin:0 15vw;
+    padding:1.3rem;
+    border-radius:0.8rem;
+    font-weight:600;
+    line-height:1.5;
+    border:2px solid rgba(173, 202, 219, 0.2);
+    background-color:rgba(173, 202, 219, 0.1);
+}
+
+.greeting,.aboutMeHomeText{
+    color:gray;
+    font-size:1.7rem;
+}
+
+.myName{
+    margin:10px 0 20px 0;
+    font-size:4rem;
+    color:#2d3186;
+    line-height:1.1;
+    font-weight:900;
+}
+
+.aboutMeHomeText{
+    width:100%;
+    justify-content:flex-start;
+    gap:4px;
+}
+
+.aboutMeHomeText>span{
+    min-height:36px;
+    max-width:400px;
+    padding:6px;
+    position:relative;
+    flex-direction:column;
+    align-items:flex-start;
+    flex-grow:1;
+    border-radius:0.4rem;
+    background-color:#7dd3fc26;
+    color:#38bdf8;
+    font-weight:800;
+    letter-spacing:0.8px;
+}
+
+.aboutMeHomeText>span>span{
+    width:100%;
+    position:absolute;
+    opacity:0;
+    animation: changeAboutMeText 10s infinite;
+}
+
+.aboutMeHomeText > span > span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.aboutMeHomeText > span > span:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.aboutMeHomeText > span > span:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.aboutMeHomeText > span > span:nth-child(4) {
+    animation-delay: 6s;
+}
+
+.aboutMeHomeText > span > span:nth-child(5) {
+    animation-delay: 8s;
+}
+
+.homeButtons{
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    gap:1.3rem;
+    margin-top:60px;
+}
+
+.gitHubBtn,.linkedInBtn{
+    border:3px solid;
+    padding:1em 1.5em;
+    border-radius:2rem;
+    font-size:1.1rem;
+    font-weight:800;
+    transition:all 0.3s ease-in-out;
+    gap:1em;
+}
+
+.gitHubBtn{
+    background-color:rgba(110, 226, 110, 0.501);
+    border-color:rgb(110, 226, 110);
+}
+
+.linkedInBtn{
+    background-color:rgba(85, 207, 255, 0.501);
+    border-color:rgb(85,207,255);
+}
+
+.homeButtons button:hover{
+    background-color:#000;
+    color:#FFF;
+    transform:scale(1.1);
+}
+
+@keyframes changeAboutMeText {
+    0% {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    30% {
+        opacity: 0;
+        transform: translateY(-24px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-24px);
+    }
+}
+
+@media only screen and (max-width:1065px) {
+    .homeCard{
+        margin:0 auto 0 auto;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .greeting,.aboutMeHomeText{
+        font-size:0.8rem;
+    }
+
+    .myName{
+        font-size:2rem;
+    }
+
+    .aboutMeHomeText>span{
+        min-height:28px;
+        max-width:200px;
+    }
+
+    .homeButtons{
+        margin-top:40px;
+        gap:1rem;
+    }
+
+    .gitHubBtn,.linkedInBtn{
+        border-radius:1.4rem;
+        font-size:0.8rem;
+    }
+}
