@@ -43,7 +43,7 @@ export default function Contact() {
     }, []);
 
     return (
-        <section ref={contactSectionRef} className="contact flex">
+        <section ref={contactSectionRef} id="contact" className="contact flex">
             <h2>Contact Me:</h2>
             <div className="contactForm flex">
                 <form className="flex flex">

@@ -79,7 +79,7 @@ export default function Work() {
     };
 
     return (
-        <section className="work flex">
+        <section id="work" className="work flex">
             <h2>Work showcase:</h2>
             <div className="myWork flex">
                 <WorkCard projectDetails={dictionaryProject} />

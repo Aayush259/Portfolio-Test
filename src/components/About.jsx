@@ -4,7 +4,7 @@ import '../styles/About.css';
 export default function About() {
 
     return (
-        <section className="about flex">
+        <section id="about" className="about flex">
             <h2>About Me:</h2>
             <div className="aboutMeDescription">
                 <p>So, you made it this far into my website. Hopefully you find it interesting!</p>

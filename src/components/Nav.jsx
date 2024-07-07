@@ -7,13 +7,13 @@ export default function Nav() {
         <>
         <nav className="nav flex">
             <li className="navLink">
-                <a href="#">Work</a>
+                <a href="#work">Work</a>
             </li>
             <li className="navLink">
-                <a href="#">About</a>
+                <a href="#about">About</a>
             </li>
             <li className="navLink">
-                <a href="#">Contact</a>
+                <a href="#contact">Contact</a>
             </li>
         </nav>
         </>
