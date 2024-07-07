@@ -96,7 +96,7 @@
 @keyframes changeAboutMeText {
     0% {
         opacity: 0;
-        transform: translateY(24px);
+        transform: translateY(28px);
     }
     10% {
         opacity: 1;
@@ -108,11 +108,11 @@
     }
     30% {
         opacity: 0;
-        transform: translateY(-24px);
+        transform: translateY(-28px);
     }
     100% {
         opacity: 0;
-        transform: translateY(-24px);
+        transform: translateY(-28px);
     }
 }
 
