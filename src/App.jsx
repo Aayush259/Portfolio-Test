@@ -8,9 +8,21 @@ export default function App() {
 
   return (
     <>
+    <div className="wrapper">
+      <div className="floatingIcon"></div>
+      <div className="floatingIcon"></div>
+      <div className="floatingIcon"></div>
+      <div className="floatingIcon"></div>
+      <div className="floatingIcon"></div>
+      <div className="floatingIcon"></div>
+      <div className="floatingIcon"></div>
+      <div className="floatingIcon"></div>
+      <div className="floatingIcon"></div>
+      <div className="floatingIcon"></div>
       <Home />
       <Work />
       <About />
+    </div>
     </>
   );
 };
