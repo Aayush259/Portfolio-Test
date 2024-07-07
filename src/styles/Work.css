@@ -3,6 +3,7 @@
     margin:1.2rem auto;
     justify-content:flex-start;
     align-items:flex-start;
+    max-width:1450px;
 }
 
 .workCard{

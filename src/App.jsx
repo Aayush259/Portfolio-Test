@@ -3,6 +3,7 @@ import './styles/App.css';
 import Home from './components/Home';
 import Work from './components/Work';
 import About from './components/About';
+import Nav from './components/Nav';
 
 export default function App() {
 
@@ -19,9 +20,12 @@ export default function App() {
       <div className="floatingIcon"></div>
       <div className="floatingIcon"></div>
       <div className="floatingIcon"></div>
-      <Home />
-      <Work />
-      <About />
+      <div className="app">
+        <Nav />
+        <Home />
+        <Work />
+        <About />
+      </div>
     </div>
     </>
   );
