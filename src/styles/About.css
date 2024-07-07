@@ -5,8 +5,10 @@
     font-weight:500;
     width:1000px;
     margin:1.2rem 2rem;
-    background-color: rgba(228, 244, 250, 0.616);
-    border-color: rgba(228, 244, 250, 0.316);
+}
+
+body.dark .aboutMeDescription{
+    color:lightgray;
 }
 
 .aboutMeDescription>p:nth-child(1){

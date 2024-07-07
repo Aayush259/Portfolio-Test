@@ -24,6 +24,10 @@
     opacity: 0;
 }
 
+body.dark .footerLink{
+    border-color:#FFF;
+}
+
 .footerLink:hover span {
     animation: typing 1s steps(40, end) forwards, blink-cursor 0.75s step-end infinite;
     opacity: 1;
@@ -36,7 +40,7 @@
 
 @keyframes blink-cursor {
     from, to { border-color: transparent; }
-    50% { border-color: black; }
+    50% { border-color: rgb(150, 148, 148); }
 }
 
 @media only screen and (max-width: 700px) {
@@ -47,7 +51,6 @@
         border:transparent;
     }
 }
-
 
 @media only screen and (max-width: 500px) {
     .footer{

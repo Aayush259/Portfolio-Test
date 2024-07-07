@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing:border-box;
+    transition:all 0.3s ease-in-out;
 }
 
 body{
@@ -36,6 +37,10 @@ h2{
     color:rgb(51, 51, 51);
 }
 
+body.dark h2{
+    color: #FFF;
+}
+
 section{
     position:relative;
 }
@@ -51,6 +56,10 @@ section{
     scroll-behavior:smooth;
 }
 
+body.dark .wrapper{
+    background:linear-gradient(60deg, rgba(1, 2, 41, 0.381) 0%, rgba(28, 4, 56, 0.564) 35%, rgb(2, 53, 63) 100%);
+}
+
 .floatingIcon{
     position:fixed;
     width:35px;
@@ -62,64 +71,68 @@ section{
     animation:float linear infinite;
 }
 
+body.dark .floatingIcon{
+    border-color:rgba(224, 217, 217, 0.8);
+}
+
 .floatingIcon:nth-child(1){
     top:12vh;
     left:42%;
-    animation-duration:10s;
+    animation-duration:7s;
 }
 
 .floatingIcon:nth-child(2){
     top:70vh;
     left:50%;
-    animation-duration:7s;
+    animation-duration:4s;
 }
 
 .floatingIcon:nth-child(3){
     top:17vh;
     left:6%;
-    animation-duration:9s;
+    animation-duration:6s;
 }
 
 .floatingIcon:nth-child(4){
     top:12vh;
     left:42%;
-    animation-duration:10s;
+    animation-duration:4s;
 }
 
 .floatingIcon:nth-child(5){
     top:67vh;
     left:10%;
-    animation-duration:6s;
+    animation-duration:3s;
 }
 
 .floatingIcon:nth-child(6){
     top:80vh;
     left:70%;
-    animation-duration:12s;
+    animation-duration:9s;
 }
 
 .floatingIcon:nth-child(7){
     top:60vh;
     left:80%;
-    animation-duration:15s;
+    animation-duration:11s;
 }
 
 .floatingIcon:nth-child(8){
     top:32vh;
     left:25%;
-    animation-duration:16s;
+    animation-duration:12s;
 }
 
 .floatingIcon:nth-child(9){
     top:90vh;
     left:25%;
-    animation-duration:9s;
+    animation-duration:6s;
 }
 
 .floatingIcon:nth-child(10){
     top:20vh;
     left:80%;
-    animation-duration:5s;
+    animation-duration:3s;
 }
 
 .home,.work,.about,.contact{
@@ -139,6 +152,11 @@ section{
     border:2px solid rgba(173, 202, 219, 0.2);
     background-color:rgba(173, 202, 219, 0.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .homeCard, body.dark .aboutMeDescription{
+    background-color:rgba(20, 24, 26, 0.2);
+    border-color:rgba(20, 24, 26, 0.1);
 }
 
 @keyframes float {

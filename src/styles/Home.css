@@ -4,12 +4,20 @@
     font-size:1.7rem;
 }
 
+body.dark .greeting, body.dark .aboutMeHomeText{
+    color:lightgray;
+}
+
 .myName{
     margin:10px 0 20px 0;
     font-size:4.4rem;
     color:#2d3186;
     line-height:1.1;
     font-weight:900;
+}
+
+body.dark .myName{
+    color:#e5e8f5;
 }
 
 .aboutMeHomeText{

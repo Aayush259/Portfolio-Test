@@ -13,6 +13,10 @@
     border-radius:0.5rem;
 }
 
+body.dark .contactForm{
+    border-color:rgb(182, 190, 202);
+}
+
 .contactForm form{
     flex-direction:column;
     align-items:flex-start;
@@ -28,6 +32,10 @@
     color:rgb(65, 67, 70);
 }
 
+body.dark .label{
+    color:rgb(182, 190, 202);
+}
+
 #message,#name,#email{
     width:450px;
     padding:2px;
@@ -37,6 +45,11 @@
     border-bottom:2px solid rgb(65, 67, 70);
     transition:all 0.3s ease-in-out;
     outline:none;
+}
+
+body.dark #message,body.dark #name,body.dark #email{
+    border-color:rgb(182, 190, 202);
+    color:#FFF;
 }
 
 label[for="message"]{
@@ -53,6 +66,10 @@ label[for="message"]{
     border-color:#000;
 }
 
+body.dark #message:focus,body.dark #name:focus,body.dark #email:focus{
+    border-color:#FFF;
+}
+
 .sendBtn{
     margin-top:4rem;
     padding:0.6rem 0.9rem;
@@ -63,10 +80,21 @@ label[for="message"]{
     transition:all 0.3s ease-in-out;
 }
 
+body.dark .sendBtn{
+    border-color:rgb(182, 190, 202);
+    color:rgb(182, 190, 202);
+}
+
 .sendBtn:hover{
     background-color:#000;
     border-color:#000;
     color:#FFF;
+}
+
+body.dark .sendBtn:hover{
+    color:#000;
+    background-color:rgb(25, 199, 199);
+    border-color:rgb(25, 199, 199);
 }
 
 @media only screen and (max-width:1300px){
