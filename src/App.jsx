@@ -5,6 +5,7 @@ import Work from './components/Work';
 import About from './components/About';
 import Nav from './components/Nav';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 export default function App() {
 
@@ -27,6 +28,7 @@ export default function App() {
         <Work />
         <About />
         <Contact />
+        <Footer />
       </div>
     </div>
     </>

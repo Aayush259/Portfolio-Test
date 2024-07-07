@@ -1,6 +1,5 @@
 
 .contact{
-    margin-bottom:12rem;
     letter-spacing:0.8px;
 }
 
@@ -71,7 +70,7 @@ label[for="message"]{
 @media only screen and (max-width:1300px){
     .contactForm{
         width:90%;
-        margin:2rem auto;
+        margin:2rem auto 0 auto;
         padding:4rem 2.5rem;
     }
 }
