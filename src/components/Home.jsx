@@ -15,7 +15,7 @@ export default function Home() {
     <section className="home flex">
         <div className="homeCard">
             <p className="greeting">Hi! I'm</p>
-            <p className="myName">Aayush Kumar Kumawat</p>
+            <h1 className="myName">Aayush Kumar Kumawat</h1>
             <p className="aboutMeHomeText flex">
                 and I
                 <span className="flex">
