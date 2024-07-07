@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Work from './components/Work';
 import About from './components/About';
 import Nav from './components/Nav';
+import Contact from './components/Contact';
 
 export default function App() {
 
@@ -25,6 +26,7 @@ export default function App() {
         <Home />
         <Work />
         <About />
+        <Contact />
       </div>
     </div>
     </>

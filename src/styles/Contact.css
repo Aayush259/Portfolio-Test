@@ -1,0 +1,83 @@
+
+.contact{
+    margin-bottom:12rem;
+    letter-spacing:0.8px;
+}
+
+.contactForm{
+    width:75%;
+    margin:2rem;
+    padding:7rem 2.5rem;
+    border:2px solid rgb(65, 67, 70);
+    border-radius:0.5rem;
+}
+
+.contactForm form{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:2.5rem;
+}
+
+.label{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0.4rem;
+    font-size:0.8em;
+    font-weight:600;
+    color:rgb(65, 67, 70);
+}
+
+#message,#name,#email{
+    width:450px;
+    padding:2px;
+    font-size:1rem;
+    background-color:transparent;
+    border:none;
+    border-bottom:2px solid rgb(65, 67, 70);
+    transition:all 0.3s ease-in-out;
+    outline:none;
+}
+
+label[for="message"]{
+    gap:0;
+}
+
+#message{
+    margin:-2.7rem 0;
+    padding: 0;
+    height:8rem;
+}
+
+#message:focus, #name:focus, #email:focus{
+    border-color:#000;
+}
+
+.sendBtn{
+    margin-top:4rem;
+    padding:0.6rem 0.9rem;
+    font-weight:600;
+    color:rgb(65, 67, 70);
+    border:2px solid rgb(65, 67, 70);
+    border-radius:0.4rem;
+    transition:all 0.3s ease-in-out;
+}
+
+.sendBtn:hover{
+    background-color:#000;
+    border-color:#000;
+    color:#FFF;
+}
+
+@media only screen and (max-width:1300px){
+    .contactForm{
+        width:90%;
+        margin:2rem auto;
+        padding:4rem 2.5rem;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    #message,#name,#email{
+        width:90%;
+    }
+}
