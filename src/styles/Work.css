@@ -1,16 +1,4 @@
 
-.work{
-    flex-direction:column;
-    align-items:flex-start;
-    min-height:100vh;
-}
-
-h2{
-    font-size:3.4rem;
-    margin: 0.6rem 0 0 2rem;
-    color:rgb(51, 51, 51);
-}
-
 .myWork{
     margin:1.2rem auto;
     justify-content:flex-start;
@@ -23,6 +11,7 @@ h2{
     max-width:90vw;
     border:2px solid;
     border-radius:1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow:hidden;
 }
 

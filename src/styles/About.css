@@ -1,0 +1,36 @@
+
+.aboutMeDescription{
+    font-size:1.1rem;
+    letter-spacing:0.5px;
+    font-weight:500;
+    width:1000px;
+    margin:1.2rem 2rem;
+    background-color: rgba(195, 221, 231, 0.616);
+    border-color: rgba(195, 221, 231, 0.316);
+}
+
+.aboutMeDescription>p:nth-child(1){
+    margin-top:0;
+}
+
+.aboutMeDescription>p{
+    margin:1.3rem 0;
+}
+
+.aboutMeDescription strong{
+    color:#38bdf8;
+    letter-spacing:0.7px;
+}
+
+.aboutMeDescription div{
+    margin-top:3rem;
+    flex-direction:column;
+    gap:0.8rem;
+    align-items:flex-start;
+}
+
+@media only screen and (max-width:900px) {
+    .aboutMeDescription{
+        margin:1.2rem auto;
+    }
+}

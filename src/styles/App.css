@@ -27,3 +27,36 @@ a{
     text-decoration:none;
     cursor:pointer;
 }
+
+h2{
+    font-size:3.4rem;
+    margin: 0.6rem 0 0 2rem;
+    color:rgb(51, 51, 51);
+}
+
+.home,.work,.about{
+    flex-direction:column;
+    align-items:flex-start;
+    min-height:100vh;
+}
+
+.homeCard,.aboutMeDescription{
+    max-width:85vw;
+    width:800px;
+    margin:0 15vw;
+    padding:1.3rem;
+    border-radius:0.8rem;
+    font-weight:600;
+    line-height:1.5;
+    border:2px solid rgba(173, 202, 219, 0.2);
+    background-color:rgba(173, 202, 219, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media only screen and (max-width:1065px) {
+    .homeCard,.aboutMeDescription{
+        margin:0 auto 0 auto;
+    }
+}
