@@ -9,6 +9,8 @@ This project was created as a task given by my friend. It is a personal portfoli
 - **Skills Section**: Highlight key skills and technologies.
 - **Contact Form**: It is dummy form which will be functional in future.
 
+<img src="./src/images/s.png" alt="Website preview" style="border-radius: 0.5rem; margin: 15px auto" />
+
 ## Technologies Used
 
 - React
