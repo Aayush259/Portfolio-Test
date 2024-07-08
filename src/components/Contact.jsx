@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import '../styles/Contact.css';
 
 export default function Contact({ theme }) {
@@ -6,26 +6,34 @@ export default function Contact({ theme }) {
     // Reference to contact section.
     const contactSectionRef = useRef(null);
 
+    // Callback to change background color based on theme.
+    const changeBackground = useCallback((isVisible) => {
+
+        if (isVisible) {
+            // Change body background and display contact section.
+            if (theme === 'light') {
+                document.body.style.background = 'rgb(25, 199, 199)';
+                document.body.style.backgroundColor = 'rgb(25, 199, 199)';
+            } else if (theme === 'dark') {
+                document.body.style.background = 'rgb(15, 23, 42)';
+                document.body.style.backgroundColor = 'rgb(0, 0, 0)';
+            }
+            contactSectionRef.current.style.opacity = '1';
+        }
+        else {
+            // Changed body background and hide contact section.
+            document.body.style.backgroundColor = 'transparent';
+            contactSectionRef.current.style.opacity = '0';
+        }
+
+    }, [theme]);
+
     // Intersection observer to track when contact section is on screen.
     useEffect(() => {
         const observer = new IntersectionObserver(
             entries => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        // Changed body background and display contact section.
-                        if (theme === 'light') {
-                            document.body.style.background = 'rgb(25, 199, 199)';
-                            document.body.style.backgroundColor = 'rgb(25, 199, 199)';
-                        } else if (theme === 'dark') {
-                            document.body.style.background = 'rgb(15, 23, 42)';
-                            document.body.style.backgroundColor = 'rgb(0, 0, 0)';
-                        }
-                        contactSectionRef.current.style.opacity = '1';
-                    } else {
-                        // Changed body background and hide contact section.
-                        document.body.style.backgroundColor = 'transparent';
-                        contactSectionRef.current.style.opacity = '0';
-                    }
+                    changeBackground(entry.isIntersecting);
                 });
             },
             {
