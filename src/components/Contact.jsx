@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/Contact.css';
 
 export default function Contact({ theme }) {
@@ -79,4 +80,8 @@ export default function Contact({ theme }) {
             </div>
         </section>
     );
+};
+
+Contact.propTypes = {
+    theme: PropTypes.string.isRequired,
 };

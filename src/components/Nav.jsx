@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import darkThemeIcon from '../images/moon.svg';
 import whiteThemeIcon from '../images/icon-sun.svg';
 import '../styles/Nav.css';
@@ -27,4 +28,10 @@ export default function Nav({ theme, setTheme }) {
         </nav>
         </>
     );
+};
+
+
+Nav.propTypes = {
+    theme: PropTypes.string.isRequired,
+    setTheme: PropTypes.func.isRequired,
 };

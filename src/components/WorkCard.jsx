@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 import linkDark from '../images/link-dark.svg';
 import linkLight from '../images/link-light.svg';
 import gitHubDark from '../images/github-dark.svg';
@@ -8,10 +9,10 @@ export default function WorkCard({ projectDetails }) {
 
     // Getting project information from projectDetails prop object.
     const projectTitle = projectDetails['projectTitle'];
+    const projectDescription = projectDetails['projectDescription'];
     const projectImage = projectDetails['projectImage'];
     const projectImageAltText = projectDetails['projectImageAltText'];
     const technologiesUsed = projectDetails['technologiesUsed'];
-    const projectDescription = projectDetails['projectDescription'];
     const gitHubLink = projectDetails['gitHubLink'];
     const liveURL = projectDetails['liveURL'];
     const backgroundColor = projectDetails['style'];
@@ -60,4 +61,17 @@ export default function WorkCard({ projectDetails }) {
 
         </div>
     );
+};
+
+WorkCard.propTypes = {
+    projectDetails: PropTypes.shape({
+        projectTitle: PropTypes.string.isRequired,
+        projectDescription: PropTypes.string.isRequired,
+        projectImage: PropTypes.string.isRequired,
+        projectImageAltText: PropTypes.string.isRequired,
+        technologiesUsed: PropTypes.arrayOf(PropTypes.string).isRequired,
+        gitHubLink: PropTypes.string.isRequired,
+        liveURL: PropTypes.string.isRequired,
+        style: PropTypes.object.isRequired,
+    }).isRequired,
 };
