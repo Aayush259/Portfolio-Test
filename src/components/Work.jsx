@@ -4,7 +4,7 @@ import ipAddressProjectImage from '../images/ip-address-tracker-project.jpeg';
 import calculatorProjectImage from '../images/calculator-project.jpeg';
 import clockProjectImage from '../images/clock-project.jpg';
 import '../styles/Work.css';
-import WorkCard from './WorkCard';
+import WorkCard from './WorkCard.jsx';
 
 export default function Work() {
 
@@ -78,15 +78,16 @@ export default function Work() {
         }
     };
 
+    // Array of all projects.
+    const projects = [dictionaryProject, ipAddressProject, clockProject, calculatorProject, whereInTheWorldProject];
+
     return (
         <section id="work" className="work flex">
             <h2>Work showcase:</h2>
             <div className="myWork flex">
-                <WorkCard projectDetails={dictionaryProject} />
-                <WorkCard projectDetails={ipAddressProject} />
-                <WorkCard projectDetails={clockProject} />
-                <WorkCard projectDetails={calculatorProject} />
-                <WorkCard projectDetails={whereInTheWorldProject} />
+                {
+                    projects.map((project) => <WorkCard key={project["projectTitle"]} projectDetails={project} />)
+                }
             </div>
         </section>
     );
