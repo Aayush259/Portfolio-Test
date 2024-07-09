@@ -29,20 +29,27 @@ export default function App() {
     // Getting all floating icons
     const floatingIcons = document.querySelectorAll('.floatingIcon');
 
-    // This function handles the mouseover event and increase the icon's size
+    // This function handles the mouseover event and increase the icon's size and change the animation direction by reversing it.
     const handleMouseOver = (event) => {
       floatingIcons.forEach(icon => {
+        icon.style.animationPlayState = 'paused';
+        // Again play the animation after 200 milliseconds.
+        setTimeout(() => {
+          icon.style.animationPlayState = 'running';
+        }, 200);
         icon.style.width = '40px';
         icon.style.height = '40px';
+        icon.style.animationDirection = 'reverse';
       });
 
       event.currentTarget.style.width = '55px';
       event.currentTarget.style.height = '55px';
     };
 
-    // This function handles the mouseover event and decrease the icon's size
+    // This function handles the mouseover event and decrease the icon's size.
     const handleMouseOut = () => {
       floatingIcons.forEach(icon => {
+        // icon.style.animationPlayState = 'running';
         icon.style.width = '35px';
         icon.style.height = '35px';
       });
