@@ -68,7 +68,7 @@ body.dark .wrapper{
     z-index:1;
     animation:float 5s linear infinite;
     pointer-events:auto;
-    transform:scale(0.7);
+    transform:scale(0);
     transition:all 0.3s ease-in-out;
 }
 
@@ -106,8 +106,8 @@ body.dark .floatingIcon{
 }
 
 .floatingIcon:nth-child(4){
-    top:40vh;
-    left:52%;
+    top:10vh;
+    left:82%;
 }
 
 .floatingIcon:nth-child(5){
@@ -122,11 +122,11 @@ body.dark .floatingIcon{
 
 .floatingIcon:nth-child(7){
     top:40vh;
-    left:80%;
+    left:70%;
 }
 
 .floatingIcon:nth-child(8){
-    top:62vh;
+    top:58vh;
     left:35%;
 }
 
@@ -136,7 +136,7 @@ body.dark .floatingIcon{
 }
 
 .floatingIcon:nth-child(10){
-    top:40vh;
+    top:50vh;
     left:0%;
 }
 
@@ -160,13 +160,13 @@ body.dark .floatingIcon{
 }
 
 body.dark .homeCard, body.dark .aboutMeDescription{
-    background-color:rgba(20, 24, 26, 0.2);
+    background-color:rgba(20, 24, 26, 0.4);
     border-color:rgba(20, 24, 26, 0.1);
 }
 
 @keyframes float {
     0%{
-        transform:scale(0.7) translate(0);
+        transform:scale(0) translate(0);
         opacity:0;
     }
     25%{
