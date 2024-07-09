@@ -8,6 +8,8 @@
 }
 
 .footerLink {
+    position:relative;
+    z-index:9999;
     gap: 0.5rem;
     letter-spacing: 0.9px;
     position: relative;

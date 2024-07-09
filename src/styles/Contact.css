@@ -30,6 +30,8 @@ body.dark .contactForm{
     font-size:0.8em;
     font-weight:600;
     color:rgb(65, 67, 70);
+    position:relative;
+    z-index:9999;
 }
 
 body.dark .label{
@@ -71,6 +73,8 @@ body.dark #message:focus,body.dark #name:focus,body.dark #email:focus{
 }
 
 .sendBtn{
+    position:relative;
+    z-index:9999;
     margin-top:4rem;
     padding:0.6rem 0.9rem;
     font-weight:600;

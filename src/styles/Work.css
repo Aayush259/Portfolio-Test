@@ -71,6 +71,8 @@
 }
 
 .workButtonContainer button{
+    position:relative;
+    z-index:9999;
     padding:0.7rem 1rem;
     border-radius:2rem;
     background-color:rgb(193, 191, 201);

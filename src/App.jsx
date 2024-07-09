@@ -24,6 +24,45 @@ export default function App() {
   // Call the changeTheme function when theme state is changed.
   useEffect(changeTheme, [theme]);
 
+  // Changing the height and width of floating div icons on mouseover and mouseout.
+  useEffect(() => {
+    // Getting all floating icons
+    const floatingIcons = document.querySelectorAll('.floatingIcon');
+
+    // This function handles the mouseover event and increase the icon's size
+    const handleMouseOver = (event) => {
+      floatingIcons.forEach(icon => {
+        icon.style.width = '40px';
+        icon.style.height = '40px';
+      });
+
+      event.currentTarget.style.width = '55px';
+      event.currentTarget.style.height = '55px';
+    };
+
+    // This function handles the mouseover event and decrease the icon's size
+    const handleMouseOut = () => {
+      floatingIcons.forEach(icon => {
+        icon.style.width = '35px';
+        icon.style.height = '35px';
+      });
+    };
+
+    // Adding mouseover and mouseout event listeners to handle animation.
+    floatingIcons.forEach(icon => {
+      icon.addEventListener('mouseover', handleMouseOver);
+      icon.addEventListener('mouseout', handleMouseOut);
+    });
+
+    // Cleanup function.
+    return () => {
+      floatingIcons.forEach(icon => {
+        icon.removeEventListener('mouseover', handleMouseOver);
+        icon.removeEventListener('mouseout', handleMouseOut);
+      });
+    };
+  }, []);
+
   return (
     <>
     <div className="wrapper">

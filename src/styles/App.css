@@ -67,8 +67,17 @@ body.dark .wrapper{
     background-color:transparent;
     border:4px solid rgba(29, 28, 28, 0.8);
     border-radius:0.8rem;
-    z-index:-1;
-    animation:float linear infinite;
+    z-index:1;
+    animation:float 5s linear infinite;
+    pointer-events:auto;
+    transform:scale(0);
+    transition:all 0.3s ease-in-out;
+}
+
+.floatingIcon:hover{
+    height:45px;
+    width:45px;
+    border-width:6px;
 }
 
 body.dark .floatingIcon{
@@ -78,61 +87,61 @@ body.dark .floatingIcon{
 .floatingIcon:nth-child(1){
     top:12vh;
     left:42%;
-    animation-duration:7s;
+    animation-delay:0.8s;
 }
 
 .floatingIcon:nth-child(2){
     top:70vh;
     left:50%;
-    animation-duration:4s;
+    animation-delay:1s;
 }
 
 .floatingIcon:nth-child(3){
     top:17vh;
     left:6%;
-    animation-duration:6s;
+    animation-delay:0.4s;
 }
 
 .floatingIcon:nth-child(4){
-    top:12vh;
+    top:32vh;
     left:42%;
-    animation-duration:4s;
+    animation-delay:2s;
 }
 
 .floatingIcon:nth-child(5){
     top:67vh;
     left:10%;
-    animation-duration:3s;
+    animation-delay:1.8s;
 }
 
 .floatingIcon:nth-child(6){
     top:80vh;
     left:70%;
-    animation-duration:9s;
+    animation-delay:0s;
 }
 
 .floatingIcon:nth-child(7){
     top:60vh;
     left:80%;
-    animation-duration:11s;
+    animation-delay:1.4s;
 }
 
 .floatingIcon:nth-child(8){
     top:32vh;
     left:25%;
-    animation-duration:12s;
+    animation-delay:1s;
 }
 
 .floatingIcon:nth-child(9){
     top:90vh;
     left:25%;
-    animation-duration:6s;
+    animation-delay:0.5s;
 }
 
 .floatingIcon:nth-child(10){
     top:20vh;
     left:80%;
-    animation-duration:3s;
+    animation-delay:1.1s;
 }
 
 .home,.work,.about,.contact{
