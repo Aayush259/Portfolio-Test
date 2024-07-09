@@ -24,76 +24,90 @@ export default function App() {
   // Call the changeTheme function when theme state is changed.
   useEffect(changeTheme, [theme]);
 
-  // Changing the height and width of floating div icons on mouseover and mouseout.
-  useEffect(() => {
+  // This function handles the mouse enter event and increase the icon's size and change the animation direction by reversing it.
+  const handleMouseOver = (event) => {
     // Getting all floating icons
     const floatingIcons = document.querySelectorAll('.floatingIcon');
 
-    // This function handles the mouseover event and increase the icon's size and change the animation direction by reversing it.
-    const handleMouseOver = (event) => {
-      floatingIcons.forEach(icon => {
-        icon.style.animationPlayState = 'paused';
-        // Again play the animation after 200 milliseconds.
-        setTimeout(() => {
-          icon.style.animationPlayState = 'running';
-        }, 200);
-        icon.style.width = '40px';
-        icon.style.height = '40px';
-        icon.style.animationDirection = 'reverse';
-      });
-
-      event.currentTarget.style.width = '55px';
-      event.currentTarget.style.height = '55px';
-    };
-
-    // This function handles the mouseover event and decrease the icon's size.
-    const handleMouseOut = () => {
-      floatingIcons.forEach(icon => {
-        // icon.style.animationPlayState = 'running';
-        icon.style.width = '35px';
-        icon.style.height = '35px';
-      });
-    };
-
-    // Adding mouseover and mouseout event listeners to handle animation.
     floatingIcons.forEach(icon => {
-      icon.addEventListener('mouseover', handleMouseOver);
-      icon.addEventListener('mouseout', handleMouseOut);
+      icon.style.animationPlayState = 'paused';
+      icon.style.animationDirection = 'reverse';
+
+      // Again play the animation after 300 milliseconds.
+      setTimeout(() => {
+        icon.style.animationPlayState = 'running';
+      }, 300);
+      icon.querySelector('.icon').style.width = '40px';
+      icon.querySelector('.icon').style.height = '40px';
     });
 
-    // Cleanup function.
-    return () => {
-      floatingIcons.forEach(icon => {
-        icon.removeEventListener('mouseover', handleMouseOver);
-        icon.removeEventListener('mouseout', handleMouseOut);
-      });
-    };
-  }, []);
+    event.currentTarget.querySelector('.icon').style.width = '55px';
+    event.currentTarget.querySelector('.icon').style.height = '55px';
+  };
+  
+  // This function handles the mouse leave event and decrease the icon's size.
+  const handleMouseOut = () => {
+    // Getting all floating icons
+    const floatingIcons = document.querySelectorAll('.floatingIcon');
+
+    floatingIcons.forEach(icon => {
+      icon.style.animationPlayState = 'paused';
+      icon.style.animationDirection = 'normal';
+      
+      // Again play the animation after 300 milliseconds.
+      setTimeout(() => {
+        icon.style.animationPlayState = 'running';
+      }, 300);
+      icon.querySelector('.icon').style.width = '35px';
+      icon.querySelector('.icon').style.height = '35px';
+    });
+  };
 
   return (
     <>
-    <div className="wrapper">
-      <div className="floatingIcon"></div>
-      <div className="floatingIcon"></div>
-      <div className="floatingIcon"></div>
-      <div className="floatingIcon"></div>
-      <div className="floatingIcon"></div>
-      <div className="floatingIcon"></div>
-      <div className="floatingIcon"></div>
-      <div className="floatingIcon"></div>
-      <div className="floatingIcon"></div>
-      <div className="floatingIcon"></div>
-      <div className="app">
-        <Suspense fallback={<Loader />}>
-          <Nav theme={theme} setTheme={setTheme} />
-          <Home />
-          <Work />
-          <About />
-          <Contact theme={theme} />
-          <Footer />
-        </Suspense>
+      <div className="wrapper">
+        <div className="floatingIcon flex" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
+          <div className="icon"></div>
+        </div>
+        <div className="floatingIcon flex" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
+          <div className="icon"></div>
+        </div>
+        <div className="floatingIcon flex" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
+          <div className="icon"></div>
+        </div>
+        <div className="floatingIcon flex" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
+          <div className="icon"></div>
+        </div>
+        <div className="floatingIcon flex" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
+          <div className="icon"></div>
+        </div>
+        <div className="floatingIcon flex" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
+          <div className="icon"></div>
+        </div>
+        <div className="floatingIcon flex" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
+          <div className="icon"></div>
+        </div>
+        <div className="floatingIcon flex" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
+          <div className="icon"></div>
+        </div>
+        <div className="floatingIcon flex" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
+          <div className="icon"></div>
+        </div>
+        <div className="floatingIcon flex" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
+          <div className="icon"></div>
+        </div>
+
+        <div className="app">
+          <Suspense fallback={<Loader />}>
+            <Nav theme={theme} setTheme={setTheme} />
+            <Home />
+            <Work />
+            <About />
+            <Contact theme={theme} />
+            <Footer />
+          </Suspense>
+        </div>
       </div>
-    </div>
     </>
   );
 };
