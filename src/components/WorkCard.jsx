@@ -23,7 +23,7 @@ export default function WorkCard({ projectDetails }) {
 
     return (
         <div className="workCard" style={backgroundColor}>
-            <img className="projectImage" src={projectImage} alt={projectImageAltText} width={300} height={200} />
+            <img className="projectImage" src={projectImage} alt={projectImageAltText} width={300} height={200} loading='lazy' />
 
             <div className="technologyUsedContainer flex">
                 {
@@ -44,7 +44,7 @@ export default function WorkCard({ projectDetails }) {
                             onMouseLeave={() => {sourceCodeBtnImgRef.current.src = gitHubDark}}
                             aria-label='Source Code'
                         >
-                            <img ref={sourceCodeBtnImgRef} src={gitHubDark} width={20} height={20} alt='Github' />
+                            <img ref={sourceCodeBtnImgRef} src={gitHubDark} width={20} height={20} alt='Github' loading='lazy' />
                             Source Code
                         </button>
                     </a>
@@ -55,7 +55,7 @@ export default function WorkCard({ projectDetails }) {
                             onMouseLeave={() => {liveUrlBtnImgRef.current.src = linkDark}}
                             aria-label='Live URL'
                         >
-                            <img ref={liveUrlBtnImgRef} src={linkDark} width={20} height={20} alt='Live URL' />
+                            <img ref={liveUrlBtnImgRef} src={linkDark} width={20} height={20} alt='Live URL' loading='lazy' />
                         </button>
                     </a>
                 </div>

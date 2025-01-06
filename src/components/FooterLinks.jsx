@@ -11,7 +11,7 @@ export default function FooterLinks({ linkDetails }) {
 
     return (
         <a href={href} className="footerLink flex" aria-label={title}>
-            <img src={imageSrc} alt={imageAlt} width={20} />
+            <img loading='lazy' src={imageSrc} alt={imageAlt} width={20} height={20} />
             <span>{title}</span>
         </a>
     );
