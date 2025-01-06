@@ -9,28 +9,19 @@ export default function About() {
             <div className="aboutMeDescription">
                 <p>So, you made it this far into my website. Hopefully you find it interesting!</p>
 
-                <p><strong>👨‍💻 Let me introduce myself:</strong> I'm Aayush Kumar Kumawat, a tech enthusiast 💻 and a passionate coder with strong foundation in JavaScript and React. I have a knack for creating dynamic and responsive web applications that provide excellent user experiences.</p>
-                <p>I am currently pursuing my bachelor's degree at University Maharaja College 👑, Jaipur, where I am in my first year. This combination of formal education and independent learning has equipped me with a solid foundation in web development, and I am continuously striving to enhance my skills and build dynamic, responsive web applications.</p>
+                <p><strong>👨‍💻 Let me introduce myself:</strong> I'm Aayush Kumar Kumawat, a tech enthusiast 💻 and a passionate coder with a strong foundation in JavaScript, TypeScript, React, and Next.js. I love building dynamic, responsive, and user-friendly web applications that deliver seamless experiences.</p>
+                <p>I have worked on a variety of projects, including full-stack applications, where I handled everything from frontend design to backend functionality. My focus is always on writing clean, efficient code and continuously improving my skills to tackle new challenges.</p>
 
-                <p>I stand as a paragon of a fervent enthusiast of the scientific realm. My educational
-                journey echoes my unwavering commitment and passion for knowledge. I showcase an unparalled
-                intellectual prowess and unwavering dedication to his studies. My affinity for science and technology
-                not only defines his academic trajectory but also serves as the cornerrstone of his character. Innnate humility and kind demeanor, blended with practical and logical thinking, from the foundation for
-                my adeptness in crafting intricate programming solutions. Despite his exceptional intelligence, he
-                finds solace in soltitude, embracing my introverted and shy nature, often opting for seclusion over
-                social interactions. Yet, within the confines of my inner world, I meticulously orchestrates the
-                amalgamation of his inherent brilliance with tireless diligence, exemplifying a rare gift to synchronize
-                intellect with unwavering persistence. I embody the epitome of a dedicated scholar and a quietly
-                tenacious problem solver, harmonizing intellectual acumen with a profound dedication to his craft.</p>
+                <p>As an introvert, I find joy in quiet moments of creativity and problem-solving, where I can focus deeply on my work. Despite this, I enjoy connecting with like-minded people to share ideas and collaborate on exciting projects. Feel free to explore my work, and don’t hesitate to reach out if you'd like to connect! 🚀</p>
 
                 <div className="flex">
                     <p><strong>Skills:</strong></p>
-                    <p>React, JavaScript, HTML, CSS</p>
+                    <p>Next.js, JavaScript, TypeScript, React, Node, Express, Tailwind CSS, CSS</p>
                 </div>
                 
                 <div className="flex">
                     <p><strong>Have used:</strong></p>
-                    <p>Git, Leaflet JS, Rest APIs, </p>
+                    <p>Git, Vue.js, Saas, Nuxt, Postman, MongoDB</p>
                 </div>
             </div>
         </section>
