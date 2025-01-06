@@ -10,7 +10,7 @@ export default function FooterLinks({ linkDetails }) {
     const imageAlt = linkDetails['imageAlt'];
 
     return (
-        <a href={href} className="footerLink flex">
+        <a href={href} className="footerLink flex" aria-label={title}>
             <img src={imageSrc} alt={imageAlt} width={20} />
             <span>{title}</span>
         </a>

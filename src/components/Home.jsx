@@ -28,25 +28,25 @@ export default function Home() {
             </p>
 
             <div className="homeButtons flex">
-                <a href="https://github.com/Aayush259" target="_blank">
+                <a href="https://github.com/Aayush259" target="_blank" aria-label='My Work'>
                     <button
                         className="gitHubBtn flex"
                         onMouseEnter={() => {workBtnImgRef.current.src = cookieBiteLight}}
                         onMouseLeave={() => {workBtnImgRef.current.src = cookieBiteDark}}
                     >
                         My Work
-                        <img ref={workBtnImgRef} src={cookieBiteDark} height={20} />
+                        <img ref={workBtnImgRef} src={cookieBiteDark} alt='Checkout my projects' height={20} width={20} />
                     </button>
                 </a>
 
-                <a href="https://www.linkedin.com/in/aayush-kumar-kumawat/" target="_blank">
+                <a href="https://www.linkedin.com/in/aayush-kumar-kumawat/" target="_blank" aria-label='Connect with me'>
                     <button
                         className="linkedInBtn flex"
                         onMouseEnter={() => {connectBtnImgRef.current.src = paperPlaneLight}}
                         onMouseLeave={() => {connectBtnImgRef.current.src = paperPlaneDark}}
                     >
                         Got a job? Let's talk!
-                        <img ref={connectBtnImgRef} src={paperPlaneDark} height={20} />
+                        <img ref={connectBtnImgRef} src={paperPlaneDark} alt='Connect with me' height={20} width={20} />
                     </button>
                 </a>
             </div>
