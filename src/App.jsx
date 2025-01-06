@@ -1,6 +1,8 @@
 import { Suspense, lazy, useCallback, useEffect, useState } from 'react';
 import './styles/App.css';
 import Loader from './components/Loader.jsx';
+import 'gradient-icon-motion/dist/esm/index.css';
+import { FloatingIcons } from 'gradient-icon-motion';
 const Home = lazy(() => import('./components/Home.jsx'));
 const Work = lazy(() => import('./components/Work.jsx'));
 const About = lazy(() => import('./components/About.jsx'));
@@ -25,17 +27,25 @@ export default function App() {
   useEffect(changeTheme, [theme]);
 
   return (
-      <div className="wrapper">
-        <div className="app">
-          <Suspense fallback={<Loader />}>
-            <Nav theme={theme} setTheme={setTheme} />
-            <Home />
-            <Work />
-            <About />
-            <Contact theme={theme} />
-            <Footer />
-          </Suspense>
-        </div>
+    <div className="wrapper">
+      <div className="icons-wrapper">
+        <FloatingIcons
+          animationHeight={"100vh"}
+          animationWidth={"100vw"}
+          iconColor={theme === "light" ? "black" : "white"}
+        />
       </div>
+
+      <div className="app">
+        <Suspense fallback={<Loader />}>
+          <Nav theme={theme} setTheme={setTheme} />
+          <Home />
+          <Work />
+          <About />
+          <Contact theme={theme} />
+          <Footer />
+        </Suspense>
+      </div>
+    </div>
   );
 };
