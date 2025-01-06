@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Contact.css';
 
@@ -6,6 +6,22 @@ export default function Contact({ theme }) {
 
     // Reference to contact section.
     const contactSectionRef = useRef(null);
+
+    const [contact, setContact] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        setContact({
+            name: '',
+            email: '',
+            message: ''
+        });
+    }
 
     // Callback to change background color based on theme.
     const changeBackground = useCallback((isVisible) => {
@@ -61,18 +77,18 @@ export default function Contact({ theme }) {
         <section ref={contactSectionRef} id="contact" className="contact flex">
             <h2>Contact Me:</h2>
             <div className="contactForm flex">
-                <form className="flex flex">
+                <form className="flex flex" onSubmit={handleSubmit}>
                     <label htmlFor="name" className="label flex">
                         Your Name:
-                        <input id="name" type="text" name="name" required />
+                        <input id="name" type="text" name="name" value={contact.name} required onChange={e => setContact({ ...contact, name: e.target.value })} autoComplete="name" />
                     </label>
                     <label htmlFor="email" className="label flex">
                         Your Email:
-                        <input id="email" type="email" name="email" required />
+                        <input id="email" type="email" name="email" value={contact.email} required onChange={e => setContact({ ...contact, email: e.target.value })} autoComplete="email" />
                     </label>
                     <label htmlFor="message" className="label flex">
                         Message:
-                        <input id="message" type="text" name="message" required />
+                        <input id="message" type="text" name="message" value={contact.message} required onChange={e => setContact({ ...contact, message: e.target.value })} autoComplete="off" />
                     </label>
 
                     <button className="sendBtn" type="submit">Send</button>
