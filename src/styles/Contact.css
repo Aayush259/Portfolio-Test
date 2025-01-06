@@ -5,8 +5,8 @@
     transition:all 0.4s ease-in-out;
 }
 
-.contact h2 {
-    color: rgb(182, 190, 202);
+.wrapper .contact h2.head2 {
+    color: rgb(182, 190, 202) !important;
 }
 
 .contactForm{

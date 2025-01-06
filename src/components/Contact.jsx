@@ -75,7 +75,7 @@ export default function Contact({ theme }) {
 
     return (
         <section ref={contactSectionRef} id="contact" className="contact flex">
-            <h2>Contact Me:</h2>
+            <h2 className='head2'>Contact Me:</h2>
             <div className="contactForm flex">
                 <form className="flex flex" onSubmit={handleSubmit}>
                     <label htmlFor="name" className="label flex">

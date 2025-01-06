@@ -32,14 +32,14 @@ a{
     cursor:pointer;
 }
 
-h2{
-    font-size:3.4rem;
-    margin: 0.6rem 0 0 2rem;
-    color:rgb(51, 51, 51);
+.app h2.head2{
+    font-size:3.4rem !important;
+    margin: 0.6rem 0 0 2rem !important;
+    color:rgb(51, 51, 51) !important;
 }
 
-body.dark h2{
-    color: #FFF;
+body.dark .app h2.head2{
+    color: #FFF !important;
 }
 
 section{
@@ -69,85 +69,6 @@ body.dark .wrapper{
     background:linear-gradient(60deg, rgba(1, 2, 41, 0.381) 0%, rgba(28, 4, 56, 0.564) 35%, rgb(2, 53, 63) 100%);
 }
 
-.floatingIcon{
-    position:fixed;
-    padding:90px;
-    background-color:transparent;
-    z-index:1;
-    animation:float 5s linear infinite;
-    pointer-events:auto;
-    transform:scale(0);
-    transition:all 0.3s ease-in-out;
-}
-
-.floatingIcon .icon{
-    width:35px;
-    height:35px;
-    background-color:transparent;
-    border:4px solid rgba(29, 28, 28, 0.8);
-    border-radius:0.8rem;
-}
-
-.floatingIcon:hover .icon{
-    height:45px;
-    width:45px;
-    border-width:6px;
-}
-
-body.dark .floatingIcon{
-    border-color:rgba(224, 217, 217, 0.8);
-}
-
-.floatingIcon:nth-child(1){
-    top:8vh;
-    left:32%;
-}
-
-.floatingIcon:nth-child(2){
-    top:80vh;
-    left:80%;
-}
-
-.floatingIcon:nth-child(3){
-    top:4vh;
-    left:3%;
-}
-
-.floatingIcon:nth-child(4){
-    top:10vh;
-    left:82%;
-}
-
-.floatingIcon:nth-child(5){
-    top:77vh;
-    left:10%;
-}
-
-.floatingIcon:nth-child(6){
-    top:80vh;
-    left:55%;
-}
-
-.floatingIcon:nth-child(7){
-    top:40vh;
-    left:70%;
-}
-
-.floatingIcon:nth-child(8){
-    top:58vh;
-    left:35%;
-}
-
-.floatingIcon:nth-child(9){
-    top:7vh;
-    left:60%;
-}
-
-.floatingIcon:nth-child(10){
-    top:50vh;
-    left:0%;
-}
-
 .home,.work,.about,.contact{
     flex-direction:column;
     align-items:flex-start;
@@ -172,30 +93,8 @@ body.dark .homeCard, body.dark .aboutMeDescription{
     border-color:rgba(20, 24, 26, 0.1);
 }
 
-@keyframes float {
-    0%{
-        transform:scale(0) translate(0);
-        opacity:0;
-    }
-    25%{
-        opacity:1;
-    }
-    100%{
-        transform:scale(1.3) translateX(90px) translateY(-90px);
-        opacity:0;
-    }
-}
-
 @media only screen and (max-width:1065px) {
     .homeCard,.aboutMeDescription{
         margin:0 auto 0 auto;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    .floatingIcon .icon{
-        height:20px;
-        width:20px;
-        border-radius:0.4rem;
     }
 }

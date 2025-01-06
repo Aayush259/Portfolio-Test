@@ -80,7 +80,7 @@ export default function Work() {
 
     return (
         <section id="work" className="work flex">
-            <h2>Work showcase:</h2>
+            <h2 className='head2'>Work showcase:</h2>
             <div className="myWork flex">
                 {
                     projects.map((project) => <WorkCard key={project["projectTitle"]} projectDetails={project} />)
