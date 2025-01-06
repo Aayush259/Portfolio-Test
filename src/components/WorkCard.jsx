@@ -23,7 +23,7 @@ export default function WorkCard({ projectDetails }) {
 
     return (
         <div className="workCard" style={backgroundColor}>
-            <img className="projectImage" src={projectImage} alt={projectImageAltText} />
+            <img className="projectImage" src={projectImage} alt={projectImageAltText} width={300} height={200} />
 
             <div className="technologyUsedContainer flex">
                 {
@@ -37,23 +37,25 @@ export default function WorkCard({ projectDetails }) {
                 <h3 className="projectTitle">{projectTitle}</h3>
                 <p className="projectDescription">{projectDescription}</p>
                 <div className="workButtonContainer flex">
-                    <a href={gitHubLink}>
+                    <a href={gitHubLink} aria-label={`${projectTitle} source code`}>
                         <button
                             className="sourceCodeBtn flex"
                             onMouseEnter={() => {sourceCodeBtnImgRef.current.src = gitHubLight}}
                             onMouseLeave={() => {sourceCodeBtnImgRef.current.src = gitHubDark}}
+                            aria-label='Source Code'
                         >
-                            <img ref={sourceCodeBtnImgRef} src={gitHubDark} width={20} height={20} />
+                            <img ref={sourceCodeBtnImgRef} src={gitHubDark} width={20} height={20} alt='Github' />
                             Source Code
                         </button>
                     </a>
-                    <a href={liveURL}>
+                    <a href={liveURL} aria-label={`${projectTitle} live URL`}>
                         <button
                             className="liveUrlBtn flex"
                             onMouseEnter={() => {liveUrlBtnImgRef.current.src = linkLight}}
                             onMouseLeave={() => {liveUrlBtnImgRef.current.src = linkDark}}
+                            aria-label='Live URL'
                         >
-                            <img ref={liveUrlBtnImgRef} src={linkDark} width={20} height={20} />
+                            <img ref={liveUrlBtnImgRef} src={linkDark} width={20} height={20} alt='Live URL' />
                         </button>
                     </a>
                 </div>
