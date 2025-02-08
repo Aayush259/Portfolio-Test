@@ -20,6 +20,23 @@ body.dark .myName{
     color:#e5e8f5;
 }
 
+::-webkit-scrollbar {
+    width:4px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color:transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:#0284c7;
+    transition:all 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color:#38bdf8;
+}
+
 .aboutMeHomeText{
     width:100%;
     justify-content:flex-start;
